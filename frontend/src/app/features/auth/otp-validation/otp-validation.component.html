@@ -1,0 +1,83 @@
+<div class="w-full max-w-md mx-auto my-auto py-6">
+  <!-- Brand Header -->
+  <div class="text-center mb-8">
+    <div class="flex items-center justify-center mb-4">
+      <img src="assets/logo.svg" alt="FocusFlow" class="h-12 w-12 object-contain" />
+    </div>
+    <h1 class="font-serif text-2xl sm:text-[32px] sm:leading-[40px] font-medium tracking-tight text-on-surface inline-flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-2xl text-primary">verified_user</span>
+      <span>Enter verification code</span>
+    </h1>
+    <p class="mt-2.5 text-sm font-sans text-secondary leading-relaxed">
+      We have dispatched a 6-digit code to
+      <strong class="text-on-surface font-medium">{{ email() || 'your email' }}</strong>.
+      Enter the code below to verify your identity.
+      <a routerLink="/sign-up" class="ml-1 text-primary hover:underline underline-offset-4 font-medium text-xs">Change email</a>
+    </p>
+  </div>
+
+  <!-- Error Banner -->
+  @if (errorMessage()) {
+    <div class="mb-5 p-3.5 rounded-lg bg-[#ffdad6] text-[#93000a] text-xs font-sans flex items-start gap-2.5 border border-[#ba1a1a]/20">
+      <span class="material-symbols-outlined text-[18px] text-[#ba1a1a] shrink-0">error</span>
+      <span class="leading-relaxed">{{ errorMessage() }}</span>
+    </div>
+  }
+
+  <!-- Success Banner -->
+  @if (successMessage()) {
+    <div class="mb-5 p-3.5 rounded-lg bg-[#aaf2c8]/30 text-[#005234] text-xs font-sans flex items-start gap-2.5 border border-[#005234]/20">
+      <span class="material-symbols-outlined text-[18px] text-[#005234] shrink-0">check_circle</span>
+      <span class="leading-relaxed">{{ successMessage() }}</span>
+    </div>
+  }
+
+  <!-- OTP Verification Form -->
+  <form (submit)="$event.preventDefault(); verifyOtp()" class="space-y-6">
+    <app-otp-input
+      label="TEMPORAL AUTHENTICATION CODE"
+      [disabled]="isLoading()"
+      (codeChange)="onOtpChange($event)"
+      (codeCompleted)="onOtpCompleted($event)"
+      (resend)="resendOtp()"
+    />
+
+    <!-- Primary CTA Capsule Button -->
+    <button
+      type="submit"
+      [disabled]="isLoading() || currentOtp().length !== 6"
+      class="w-full h-12 rounded-full bg-[#111111] hover:bg-primary-container text-surface-container-lowest font-sans text-sm font-medium tracking-tight transition-colors duration-150 flex items-center justify-center gap-2 group shadow-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      <span>{{ isLoading() ? 'Đang xác thực...' : 'Verify & Proceed' }}</span>
+      <span class="material-symbols-outlined text-lg transition-transform duration-150 group-hover:translate-x-0.5">arrow_forward</span>
+    </button>
+
+    <!-- Alternative Links -->
+    <div class="pt-2 text-center">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 font-sans text-xs">
+        <button
+          type="button"
+          (click)="onUseBackupKey()"
+          class="inline-flex items-center gap-1.5 text-secondary hover:text-on-surface hover:underline transition-colors duration-150 cursor-pointer"
+        >
+          <span class="material-symbols-outlined text-sm">vpn_key</span>
+          <span>Use backup recovery key instead</span>
+        </button>
+        <span class="hidden sm:inline text-outline-variant">•</span>
+        <a routerLink="/sign-in" class="inline-flex items-center gap-1 text-secondary hover:text-on-surface hover:underline transition-colors duration-150">
+          <span class="material-symbols-outlined text-sm">arrow_back</span>
+          <span>Back to Sign In</span>
+        </a>
+      </div>
+    </div>
+  </form>
+
+  <!-- Cryptographic Session Lock Info Box -->
+  <div class="mt-8 p-3.5 rounded-lg border border-outline-variant bg-surface flex items-start gap-3">
+    <span class="material-symbols-outlined text-primary text-base mt-0.5">shield</span>
+    <div class="font-sans text-xs text-secondary leading-snug">
+      <span class="font-semibold text-on-surface">Cryptographic Session Lock:</span>
+      Attempts are limited to 5 sequential verification requests per 15-minute epoch.
+    </div>
+  </div>
+</div>
