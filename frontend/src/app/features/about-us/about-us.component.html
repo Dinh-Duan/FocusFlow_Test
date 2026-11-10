@@ -1,0 +1,119 @@
+<div class="min-h-screen flex flex-col justify-between bg-surface text-on-surface px-4 sm:px-8 py-4">
+  <!-- Top Bar with Brand & Language Switcher -->
+  <app-header [showBrand]="true" />
+
+  <!-- Main Content Container -->
+  <main class="w-full max-w-5xl mx-auto py-8 sm:py-14 flex flex-col gap-14 sm:gap-20">
+    <!-- Hero Section -->
+    <section class="text-center flex flex-col items-center gap-5 max-w-3xl mx-auto">
+      <span
+        class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-surface-container-low border border-outline-variant/60 text-surface-tint"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        {{ 'aboutUs.badge' | translate }}
+      </span>
+
+      <h1 class="text-3xl sm:text-5xl font-serif font-bold tracking-tight text-on-surface leading-tight">
+        {{ 'aboutUs.heroTitle' | translate }}
+      </h1>
+
+      <p class="text-base sm:text-lg text-secondary leading-relaxed max-w-2xl">
+        {{ 'aboutUs.heroSubtitle' | translate }}
+      </p>
+
+      <div class="flex items-center gap-3 pt-2">
+        <a
+          routerLink="/sign-up"
+          class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-medium text-sm transition-all shadow-xs"
+        >
+          {{ 'aboutUs.ctaGetStarted' | translate }}
+        </a>
+        <a
+          routerLink="/sign-in"
+          class="inline-flex items-center justify-center px-6 py-2.5 rounded-full border border-outline-variant/80 hover:bg-surface-container-low text-on-surface font-medium text-sm transition-all"
+        >
+          {{ 'aboutUs.ctaSignIn' | translate }}
+        </a>
+      </div>
+    </section>
+
+    <!-- Mission Banner -->
+    <section class="rounded-2xl border border-outline-variant/60 bg-surface-container-lowest p-6 sm:p-10 shadow-xs">
+      <div class="max-w-3xl mx-auto text-center flex flex-col gap-3">
+        <h2 class="text-xl sm:text-2xl font-serif font-bold text-on-surface">
+          {{ 'aboutUs.missionTitle' | translate }}
+        </h2>
+        <p class="text-sm sm:text-base text-secondary leading-relaxed">
+          {{ 'aboutUs.missionDesc' | translate }}
+        </p>
+      </div>
+    </section>
+
+    <!-- Core Pillars Grid -->
+    <section class="flex flex-col gap-8">
+      <div class="text-center">
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-on-surface">
+          {{ 'aboutUs.pillarsTitle' | translate }}
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Pillar 1: Adaptive Planning -->
+        <div class="rounded-xl border border-outline-variant/60 bg-surface-container-lowest p-6 flex flex-col gap-3 hover:border-surface-tint/60 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[24px]">alt_route</span>
+          </div>
+          <h3 class="text-lg font-semibold text-on-surface">
+            {{ 'aboutUs.pillars.planning.title' | translate }}
+          </h3>
+          <p class="text-sm text-secondary leading-relaxed">
+            {{ 'aboutUs.pillars.planning.desc' | translate }}
+          </p>
+        </div>
+
+        <!-- Pillar 2: Schedule Optimization -->
+        <div class="rounded-xl border border-outline-variant/60 bg-surface-container-lowest p-6 flex flex-col gap-3 hover:border-surface-tint/60 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[24px]">schedule</span>
+          </div>
+          <h3 class="text-lg font-semibold text-on-surface">
+            {{ 'aboutUs.pillars.scheduling.title' | translate }}
+          </h3>
+          <p class="text-sm text-secondary leading-relaxed">
+            {{ 'aboutUs.pillars.scheduling.desc' | translate }}
+          </p>
+        </div>
+
+        <!-- Pillar 3: Focus Workspace -->
+        <div class="rounded-xl border border-outline-variant/60 bg-surface-container-lowest p-6 flex flex-col gap-3 hover:border-surface-tint/60 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[24px]">timer</span>
+          </div>
+          <h3 class="text-lg font-semibold text-on-surface">
+            {{ 'aboutUs.pillars.workspace.title' | translate }}
+          </h3>
+          <p class="text-sm text-secondary leading-relaxed">
+            {{ 'aboutUs.pillars.workspace.desc' | translate }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6-Step SRL Cycle Section -->
+    <section class="rounded-2xl border border-outline-variant/60 bg-surface-container-low/70 p-6 sm:p-10 flex flex-col items-center text-center gap-4">
+      <h2 class="text-2xl font-serif font-bold text-on-surface">
+        {{ 'aboutUs.valuesTitle' | translate }}
+      </h2>
+      <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant text-xs sm:text-sm font-semibold text-primary shadow-xs">
+        {{ 'aboutUs.valuesSubtitle' | translate }}
+      </div>
+      <p class="text-sm text-secondary max-w-2xl leading-relaxed">
+        {{ 'aboutUs.valuesDesc' | translate }}
+      </p>
+    </section>
+  </main>
+
+  <!-- Systems Operational Footer -->
+  <app-footer />
+</div>
+
