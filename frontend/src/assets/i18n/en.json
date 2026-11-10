@@ -203,5 +203,33 @@
     "emailDomainFormatting": "Domain contains invalid characters or formatting.",
     "emailInvalidTld": "Invalid domain extension (.{{tld}}). Please use a valid domain (e.g. .com, .vn, .net, .org, .edu).",
     "email": "Invalid email format."
+  },
+  "aboutUs": {
+    "navTitle": "About Us",
+    "badge": "About FocusFlow",
+    "heroTitle": "Adaptive AI-Powered Learning Management Platform",
+    "heroSubtitle": "FocusFlow unifies self-regulated learning (SRL) with AI to help learners structure realistic roadmaps, optimize study schedules, and maintain deep focus.",
+    "ctaGetStarted": "Get Started",
+    "ctaSignIn": "Sign In",
+    "missionTitle": "Our Mission",
+    "missionDesc": "Empowering learners to transform abstract goals into clear, achievable daily actions, eliminating overwhelm through intelligent AI assistance and deterministic scheduling.",
+    "pillarsTitle": "Core Pillars",
+    "pillars": {
+      "planning": {
+        "title": "Adaptive AI Planning",
+        "desc": "Deconstruct high-level goals into actionable milestones and realistic tasks tailored to your learning velocity."
+      },
+      "scheduling": {
+        "title": "Schedule Optimization",
+        "desc": "Deterministically slot study sessions into available time windows, flagging overcommitments and offering smart reschedule proposals."
+      },
+      "workspace": {
+        "title": "Deep Focus Workspace",
+        "desc": "Integrated Pomodoro timer, instant Scratchpad notes, and continuous progress tracking adhering to Zimmerman's SRL cycle."
+      }
+    },
+    "valuesTitle": "The 6-Step Learning Cycle",
+    "valuesSubtitle": "Understand → Plan → Schedule → Adapt → Learn → Improve",
+    "valuesDesc": "A continuous feedback loop designed to foster study discipline, measure progress, and steadily enhance self-regulation."
   }
 }

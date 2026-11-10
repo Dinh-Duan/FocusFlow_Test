@@ -203,5 +203,33 @@
     "emailDomainFormatting": "Tên miền chứa ký tự hoặc định dạng không hợp lệ.",
     "emailInvalidTld": "Phần mở rộng tên miền (.{{tld}}) không hợp lệ. Vui lòng sử dụng tên miền hợp lệ (ví dụ: .com, .vn, .edu, .org).",
     "email": "Định dạng email không hợp lệ."
+  },
+  "aboutUs": {
+    "navTitle": "Giới thiệu",
+    "badge": "Về FocusFlow",
+    "heroTitle": "Nền tảng quản lý & điều phối học tập thông minh",
+    "heroSubtitle": "FocusFlow kết hợp mô hình tự điều hòa học tập (SRL) cùng AI để giúp người học xây dựng lộ trình thực tế, tối ưu hóa thời gian biểu và duy trì trạng thái tập trung sâu.",
+    "ctaGetStarted": "Bắt đầu ngay",
+    "ctaSignIn": "Đăng nhập",
+    "missionTitle": "Sứ mệnh của chúng tôi",
+    "missionDesc": "Giúp người học chuyển hóa mục tiêu học tập thành các hành động cụ thể mỗi ngày, hạn chế cảm giác quá tải bằng sự hỗ trợ của trí tuệ nhân tạo và điều phối lịch trình thông minh.",
+    "pillarsTitle": "Trụ cột cốt lõi",
+    "pillars": {
+      "planning": {
+        "title": "Lộ trình Thích ứng",
+        "desc": "Tự động phân rã mục tiêu lớn thành các cột mốc và task khả thi, ước tính thời lượng học tập thực tế."
+      },
+      "scheduling": {
+        "title": "Tối ưu hóa Lịch học",
+        "desc": "Phân bổ phiên học vào khung giờ rảnh theo thuật toán tất định, cảnh báo quá tải và đề xuất dời lịch khi có biến động."
+      },
+      "workspace": {
+        "title": "Không gian Tập trung Sâu",
+        "desc": "Bộ đếm Pomodoro tích hợp, ghi chú tức thời (Scratchpad) và theo dõi tiến trình liên tục theo chu trình Zimmerman SRL."
+      }
+    },
+    "valuesTitle": "Chu trình học tập 6 bước",
+    "valuesSubtitle": "Understand → Plan → Schedule → Adapt → Learn → Improve",
+    "valuesDesc": "Quy trình khép kín giúp bạn duy trì kỷ luật, đo lường sự tiến bộ và không ngừng cải thiện hiệu quả học tập cá nhân."
   }
 }
