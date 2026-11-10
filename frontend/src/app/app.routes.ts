@@ -4,6 +4,14 @@ import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   {
+    path: 'about',
+    loadComponent: () => import('./features/about-us/about-us.component').then(m => m.AboutUsComponent)
+  },
+  {
+    path: 'about-us',
+    redirectTo: 'about'
+  },
+  {
     path: '',
     component: AuthLayoutComponent,
     children: [
